@@ -1,12 +1,28 @@
-<html>
-	<head>
-		<title>Test dzialania widoku</title>
-	</head>
-		<h2>Test dzialania widoku</h2>
-        <body>
-		{% for odbior in Odbiorca %}
-                   <b>({ odbior.imie })</b>
-                   <b>{{ odbior.imie }}</b>
-               {% endfor %}
-	</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+              
+		<h1>{{ post.imie }} {{ post.nazwisko }}</h1>
+		<br><p style=" text-align: center; font-size: 20px">Basic parametrs:</b>
+		<center>
+		<table border=1 style="font-size: 13px">
+			<tr>
+				<td>Nazwa:</td><td>Wartosc:</td>
+			</tr>
+			<tr>
+				<td>Wydajnosc pompy:</td><td>{{parametry.strumien}}</td>
+			</tr>
+			<tr>
+				<td>Wysokosc podnoszenia:</td><td>{{parametry.wysokosc}}</td>
+			</tr>
+			<tr>
+				<td>Predkosc obrotowa:</td><td>{{parametry.obroty}}</td>
+			</tr>
+		</table></center>
+		<center><p style="font-size: 20px">Obliczenia charakterystyki ukladu:</b>
+			<table border=1>
+				<tr><td>Nazwa:</td><td>Wartosc:</td></tr>
+				<tr><td>Wyznaczamy wyroznik oporu ukladu:</td><td></td></tr>
+				<tr><td>Wyznaczenie charakterystyki ukladu:</td><td></td></tr>
+		 	</table>
+              </center>
+{% endblock %}
