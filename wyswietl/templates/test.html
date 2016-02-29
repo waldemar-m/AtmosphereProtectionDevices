@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<title>Test dzialania widoku</title>
+	</head>
+		<h2>Test dzialania widoku</h2>
+        <body>
+		{% for odbior in Odbiorca %}
+                   <b>({ odbior.imie })</b>
+                   <b>{{ odbior.imie }}</b>
+               {% endfor %}
+	</body>
+</html>
