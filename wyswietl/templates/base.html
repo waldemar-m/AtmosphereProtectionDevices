@@ -1,54 +1,48 @@
 <html>
-	<head>
 
-	</HEAD>
-	<BODY>
-		<br>
-		<div id="container">
-		<a href="/"><div id="logo" style="border-style: outset"><center><h2>Mechanics and Machine Design</h2><br><i style="font-size: 30px">create new device</i></center></div></a>
-	 	
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#news">About us</a></li>
-  <li class="dropdown">
-    <a href="#" class="dropbtn">Projects</a>
-    <div class="dropdown-content">
-      <a href="#">History of the projects</a>
-      <a href="/uoap/">Device protection of the atmosphere</a>
-      <a href="#">Boilers</a>
-      <a href="#">Machine construction basics</a>
-      <a href="#">machine construction basics 2</a>
-    </div>
-  </li>
-  <li><a href="#news">curiosities</a></li>
-  <li><a href="#news">Contact</a></li>
-</ul>
+<head>
+	<title>AtmosphereProtectionDevices</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
-		<div align="left" id="menu" style="border-style: outset; position: relative;">
-                        <h1>Centrifugal pump</h1>
-                        <a href="/formulaz"> calculations to project<a>
-                        <br><br>
+<body>
 
-                        <h1>Timpani</h1>
-                        Calculations to project
-                        <br><br>
-
-                        <h1>Protection of the atmosphere:</h1>
-                        Project P-0
-                </div>
-
-
-
-		<br>
-		<div id="notki" style=" text-align: left; margin: 0px; pading: 0;border: 1px;">
-			{% block content %}
-			{% endblock %}
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">AtmosphereProtectionDevices</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">User history</a></li>
+						<li><a href="/uoap/">UAOP</a></li>
+						<li><a href="#">Boilers</a></li>
+						<li><a href="#">Machine construction basics</a></li>
+						<li><a href="/formulaz">Calculations to project</a></li>
+					</ul>
+				</li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
 		</div>
-		
-		
+	</nav>
 
-		
+	<br>
 
-</BODY>
-</HTML>
+	<div>
+		{% block content %}
+		{% endblock %}
+	</div>
+
+
+
+
+
+</body>
+
+</html>
