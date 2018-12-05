@@ -1,5 +1,5 @@
 """
-Django settings for dpw3 project.
+Django settings for AtmosphereProtectionDevices project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -49,9 +49,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'dpw3.urls'
+ROOT_URLCONF = 'main.urls'
 
-WSGI_APPLICATION = 'dpw3.wsgi.application'
+WSGI_APPLICATION = 'main.wsgi.application'
 
 
 # Database
