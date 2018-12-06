@@ -1,28 +1,99 @@
 {% extends "base.html" %}
 {% block content %}
-              
-		<h1>{{ post.imie }} {{ post.nazwisko }}</h1>
-		<br><p style=" text-align: center; font-size: 20px">Basic parametrs:</b>
-		<center>
-		<table border=1 style="font-size: 13px">
-			<tr>
-				<td>Nazwa:</td><td>Wartosc:</td>
-			</tr>
-			<tr>
-				<td>Wydajnosc pompy:</td><td>{{parametry.strumien}}</td>
-			</tr>
-			<tr>
-				<td>Wysokosc podnoszenia:</td><td>{{parametry.wysokosc}}</td>
-			</tr>
-			<tr>
-				<td>Predkosc obrotowa:</td><td>{{parametry.obroty}}</td>
-			</tr>
-		</table></center>
-		<center><p style="font-size: 20px">Obliczenia charakterystyki ukladu:</b>
-			<table border=1>
-				<tr><td>Nazwa:</td><td>Wartosc:</td></tr>
-				<tr><td>Wyznaczamy wyroznik oporu ukladu:</td><td></td></tr>
-				<tr><td>Wyznaczenie charakterystyki ukladu:</td><td></td></tr>
-		 	</table>
-              </center>
+
+
+<style>
+	td {
+		color: black;
+	}
+
+	table {
+		width: 800px;
+
+	}
+
+	a {
+		text-align: center;
+		text-color: black;
+	}
+
+	#header {
+		text-align: center;
+		color: black;
+		font-size: 25px;
+		text-shadow: 5px 5px 5px LightGray;
+		padding: 1%;
+	}
+
+	#header-row {
+		background: LightGray;
+		font-size: 20px;
+		text-align: center;
+		border-radius: 25px;
+	}
+
+	#body-row {
+		font-size: 15px;
+		border-radius: 25px;
+		background: lightgreen;
+		text-align: center;
+	}
+</style>
+
+<h1 id="header">Basic parametrs:</h1>
+<hr>
+<div class="container">
+	<div id="header-row" class="row">
+		<div class="col-sm-4">
+			<p>Wydajnosc pompy:</p>
+			<p>Q[\(m^3 \over h \)]</p>
+		</div>
+		<div class="col-sm-4">
+			<p>Wysokosc podnoszenia:</p>
+			<p>H[\( m \)]</p>
+		</div>
+		<div class="col-sm-4">
+			<p>Predkosc obrotowa:</p>
+			<p>n[\( RPM \)]</p>
+		</div>
+	</div>
+
+	<br>
+	<div id="body-row" class="row">
+		<div class="col-sm-4">
+			<p>{{parametry.strumien}}</p>
+		</div>
+		<div class="col-sm-4">
+			<p>{{parametry.wysokosc}}</p>
+		</div>
+		<div class="col-sm-4">
+			<p>{{parametry.obroty}}</p>
+		</div>
+	</div>
+</div>
+
+
+<h1 id="header">Obliczenia charakterystyki ukladu:</h1>
+<hr>
+<div class="container">
+	<div id="header-row" class="row">
+		<div class="col-sm-6">
+			<p>Wyznaczamy wyroznik oporu ukladu:</p>
+		</div>
+		<div class="col-sm-6">
+			<p>Wyznaczenie charakterystyki ukladu:</p>
+		</div>
+	</div>
+	<br>
+	<div id="body-row" class="row">
+		<div class="col-sm-6">
+			<p>...</p>
+		</div>
+		<div class="col-sm-6">
+			<p>...</p>
+		</div>
+	</div>
+</div>
+
+
 {% endblock %}
