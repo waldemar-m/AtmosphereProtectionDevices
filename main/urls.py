@@ -1,20 +1,14 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
+
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^test/$','wyswietl.views.widok'),
-    url(r'^formulaz/result/$','wyswietl.views.testowywidok'),
-    url(r'^formulaz/$','wyswietl.views.mainwebsite'),
-    url(r'^edit/$','wyswietl.views.editProject'),
-    url(r'^$','wyswietl.views.major'),
-    url(r'^p0/forms/$','wyswietl.views.uoap0forms'),
-    url(r'^p0/odbiorca/$','wyswietl.views.uoap0odbiorca'),
-    url(r'^p0/result/$','wyswietl.views.uoapp0widok'),
-    url(r'^uoap/$','wyswietl.views.uoa'),
-    url(r'^p2/odbiorca/$','wyswietl.views.uoap2odbiorca'),
-    url(r'^p2/forms/$','wyswietl.views.uoap2forms'),
-    url(r'^p2/result/$','wyswietl.views.uoapp2widok'),
-
-
+    url(r'^centrifugal_pump/result/$','wyswietl.views.centrifugal_pump_result'),
+    url(r'^centrifugal_pump/form/$','wyswietl.views.centrifugal_pump_form'),
+    url(r'^$','wyswietl.views.index'),
+    url(r'^boiler/forms/$','wyswietl.views.boiler_forms'),
+    url(r'^boiler/result/$','wyswietl.views.boiler_result'),
+    url(r'^electrostatic_precipitators/form/$','wyswietl.views.electrostatic_form'),
+    url(r'^electrostatic_precipitators/result/$','wyswietl.views.electrostatic_result'),
 )
