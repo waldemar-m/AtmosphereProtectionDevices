@@ -11,4 +11,6 @@ urlpatterns = patterns('',
     url(r'^boiler/result/$','wyswietl.views.boiler_result'),
     url(r'^electrostatic_precipitators/form/$','wyswietl.views.electrostatic_form'),
     url(r'^electrostatic_precipitators/result/$','wyswietl.views.electrostatic_result'),
+    url(r'^scr_reactor_nox/form/$', 'wyswietl.views.scr_form'),
+    url(r'^scr_reactor_nox/result/$', 'wyswietl.views.scr_result')
 )

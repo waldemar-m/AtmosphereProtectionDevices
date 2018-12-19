@@ -1,0 +1,80 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+    <style>
+        label {
+            padding: 3%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 17px;
+            text: Times;
+            padding: 1%;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+    </style>
+
+
+    <h1>SCR Reactor form to reduce NOX</h1>
+    <hr>
+    <p>
+        This is a single form to generate results of calculations. When we add input
+        variables we receive full callculations to ours project. We don't need to have
+        some dates from scientific boards. This program prepare all needed dates to you. 
+    </p>
+
+
+    <form class="form-horizontal" action="/scr_reactor_nox/result/">
+
+        <div class="container">
+
+            <div class="row">
+                <label class="control-label col-sm-3" for="email">Tu:</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <label class="control-label col-sm-3" for="pwd">t1:</label>
+                <div class="col-sm-6">          
+                    <input type="text" class="form-control" id="pwd" name="pwd" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <label class="control-label col-sm-3" for="pwd">tk:</label>
+                <div class="col-sm-6">          
+                    <input type="text" class="form-control" id="pwd" name="pwd" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <label class="control-label col-sm-3" for="pwd">t1:</label>
+                <div class="col-sm-6">          
+                    <input type="text" class="form-control" id="pwd" name="pwd" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <label class="control-label col-sm-3" for="pwd">Ve:</label>
+                <div class="col-sm-6">          
+                    <input type="text" class="form-control" id="pwd" name="pwd" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-offset-5 col-sm-3">
+                    <button type="submit" class="btn btn-default">Generate</button>
+                </div>
+            </div>
+
+        </div>
+  </form>
+{% endblock %}

@@ -13,7 +13,7 @@ from .forms import UOAP2Form
 
 
 def index(request):
-    return render_to_response('index.html')
+    return render_to_response('base/index.html')
 
 
 def centrifugal_pump_form(request):
@@ -27,7 +27,7 @@ def centrifugal_pump_form(request):
             return redirect(centrifugal_pump_result) 
     else:
         form=ParametryForm()
-    return render(request,'edit.html',{'form':form})
+    return render(request,'p3/centrifugal_pump_form.html', {'form':form})
 
 
 def centrifugal_pump_result(request):
@@ -36,7 +36,7 @@ def centrifugal_pump_result(request):
     """
     post=Odbiorca.objects.all().last()
     parametry=Parametry.objects.all().last()
-    return render(request,'test.html',{'parametry':parametry})
+    return render(request,'p3/centrifugal_pump_result.html',{'parametry':parametry})
 
 
 def electrostatic_form(request):
@@ -50,7 +50,7 @@ def electrostatic_form(request):
             return redirect(electrostatic_result)
     else:
         form=UOAP2Form()
-    return render(request,'uoapp2.html',{'form':form})
+    return render(request,'p2/electrostatic_form.html',{'form':form})
 
 
 def electrostatic_result(request):
@@ -59,7 +59,7 @@ def electrostatic_result(request):
     """
     post = Odbiorca.objects.all().last()
     parametry = UOAP2.objects.all().last()
-    return uoapp0(request,'uoap2result.html',{'uoap2':parametry})
+    return uoapp0(request,'p2/electrostatic_result.html',{'uoap2':parametry})
 
 
 def boiler_forms(request):
@@ -70,11 +70,23 @@ def boiler_forms(request):
             return redirect(boiler_result)
     else:
         form=UOAP0Form()
-    return render(request,'uoapp0.html',{'form':form})
+    return render(request,'p0/boiler_forms.html',{'form':form})
 
 
 def boiler_result(request):
-    
      post=Odbiorca.objects.all().last()
      parametry=UOAP0.objects.all().last()
      return render(request,'test.html',{'uoap0':parametry})
+
+
+def scr_form(request):
+    """
+        This is a form view to generate SCR Reactor Project
+    """
+    return render(request,'p4/scr_reactor_form.html')
+
+def scr_result(request):
+    """
+        This is a form view to generate SCR Reactor Project
+    """
+    return render(request,'p4/scr_reactor_result.html')
